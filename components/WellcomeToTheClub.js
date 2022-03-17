@@ -8,7 +8,7 @@ function ImageComponent(text) {
           alt=""
           srcSet=""
         />
-        <h2 className="text-white font-light tablet:text-center desktop:text-left mobile:text-center">{text}</h2>
+        <h2 className=" font-light tablet:text-center desktop:text-left mobile:text-center">{text}</h2>
       </div>
     </div>
   )
@@ -26,13 +26,13 @@ export default function WellcomeToTheClub() {
   ]
 
   return (<div
-    className="max-w-7xl mx-auto mt-14 border-solid border-white border-b-2 mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center"
+    className="max-w-7xl mx-auto mt-14 border-solid border-gray-600 border-b-2 mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center"
   >
-    <h1 className="text-white text-3xl font-montserrat font-bold italic">
+    <h1 className=" text-3xl font-montserrat font-bold italic">
       WELLCOME TO THE CLUB
     </h1>
     <p
-      className="py-5 text-white font-montserrat font-light tablet:max-w-xl mobile:max-w-xl desktop:max-w-7xl mx-auto"
+      className="py-5  font-montserrat font-light tablet:max-w-xl mobile:max-w-xl desktop:max-w-7xl mx-auto"
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum,
       obcaecati atque dolorum aperiam omnis veniam nulla eligendi rem quaerat,

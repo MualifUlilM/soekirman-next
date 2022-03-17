@@ -10,7 +10,7 @@ import TheTeam from '../components/TheTeam'
 
 export default function Home(){
   return(
-    <div className="bg-black">
+    <div className="">
       <Header />
       <WellcomeToSoekirman/>
       <SideTextImageComponent title={"The Spec"}/>

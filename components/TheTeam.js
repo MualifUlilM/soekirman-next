@@ -24,12 +24,12 @@ export default function TheTeam(){
       ];
 
     return (
-        <div id="the-team" className="flex max-w-7xl mx-auto border-t-2 border-white border-solid pt-8 items-center mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center">
+        <div id="the-team" className="flex max-w-7xl mx-auto border-t-2 border-gray-600 border-solid pt-8 items-center mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center">
       <div>
-          <h1 className="font-montserrat font-bold italic text-white text-4xl">
+          <h1 className="font-montserrat font-bold italic  text-4xl">
         MEET THE TEAM
       </h1>
-      <p className="font-montserrat font-light text-white mt-5">
+      <p className="font-montserrat font-light  mt-5">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti fugit
         vitae quaerat odio laborum repellat voluptas, eaque asperiores animi
         magni architecto deserunt autem dolorum quo totam distinctio blanditiis

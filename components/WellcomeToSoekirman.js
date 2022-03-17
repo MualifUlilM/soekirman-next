@@ -16,10 +16,10 @@ const WellcomeToSoekirman = () => {
             >
 
                 <div className="max-w-3xl">
-                    <h1 className="font-montserrat font-bold italic text-white text-4xl">
+                    <h1 className="font-montserrat font-bold italic  text-4xl">
                         WELLCOME TO THE SOEKIRMAN CLUB
                     </h1>
-                    <p className="text-white font-montserrat font-light py-10">
+                    <p className=" font-montserrat font-light py-10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         dignissim imperdiet interdum. Vivamus eu sapien nisi. Morbi odio
                         risus, aliquet non purus pellentesque, feugiat fermentum orci. Donec
@@ -52,10 +52,10 @@ const WellcomeToSoekirman = () => {
                     <h2 className="text-blue-400 font-montserrat italic font-normal text-4xl">
                         FAIR DISTRIBUTION
                     </h2>
-                    <h3 className="text-white font-montserrat text-2xl">
+                    <h3 className=" font-montserrat text-2xl">
                         (BONDING CURVES ARE A PONZI)
                     </h3>
-                    <p className="text-white font-montserrat py-5">
+                    <p className=" font-montserrat py-5">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
                         dignissim imperdiet interdum. Vivamus eu sapien nisi. Morbi odio
                         risus, aliquet non purus pellentesque, feugiat fermentum orci.
@@ -71,7 +71,7 @@ const WellcomeToSoekirman = () => {
                 </div>
             </div>
 
-            <div id="buy-soekirman" className="flex justify-between bg-blue-400 h-auto p-8 items-center mobile:flex-col tablet:flex-col desktop:flex-row mobile:space-y-5 tablet:space-y-7 desktop:space-y-0">
+            <div id="buy-soekirman" className="flex justify-between bg-blue-600 text-white h-auto p-8 items-center mobile:flex-col tablet:flex-col desktop:flex-row mobile:space-y-5 tablet:space-y-7 desktop:space-y-0">
                 <div className="max-w-2 font-montserrat font-extrabold text-2xl italic">
                     BUY SOEKIRMAN
                 </div>
@@ -82,13 +82,13 @@ const WellcomeToSoekirman = () => {
                 <div className="">
                     <button
                         type="button"
-                        className=" font-montserrat font-semibold h-auto w-auto rounded-lg text-white text-lg py-4 px-5 bg-black"
+                        className=" font-montserrat font-semibold h-auto w-auto rounded-lg  text-lg py-4 px-5 bg-white text-black"
                     >
                         Buy On OpenSea
                     </button>
                 </div>
             </div>
-            <div className="h-10 border-b-2 border-white"></div>
+            <div className="h-10 border-b-2 border-gray-600"></div>
         </div>
     )
 }

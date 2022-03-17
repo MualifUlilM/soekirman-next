@@ -57,10 +57,10 @@ const Nft = () => {
         if (!listings || isListed === 'false') return
             ; (async () => {
                 setSelectedMarketNft(
-                    listings.find((marketNft) => marketNft.asset?.id === selectedNft.id)
+                    listings.find((marketNft) => marketNft.asset?.id === selectedNft.metadata.id)
                 )
 
-                console.log("⛅  ", selectedMarketNft)
+                console.log("⛅  ", selectedNft)
             })()
     }, [selectedNft, listings, isListed])
 
@@ -93,17 +93,17 @@ const Nft = () => {
     }
 
     return (
-        <div className="bg-black min-h-screen">
+        <div className=" min-h-screen">
             <Header />
             <div className="max-w-7xl mx-auto flex">
                     <img srcSet={selectedNft?.metadata.image} className="h-90 w-80"></img>
                     <div className="px-5 ml-10 w-full">
-                    <h3 className="text-white font-semibold text-2xl">SOEKIRMAN NFT</h3>
-                    <h3 className="text-white font-semibold text-2xl">{selectedNft?.metadata.name}</h3>
-                    <div className="text-white text-xl">{ownerFormat(Boolean(selectedNft)? selectedNft.owner : "")}</div>
+                    <h3 className=" font-semibold text-2xl">SOEKIRMAN NFT</h3>
+                    <h3 className=" font-semibold text-2xl">{selectedNft?.metadata.name}</h3>
+                    <div className=" text-xl">{ownerFormat(Boolean(selectedNft)? selectedNft.owner : "")}</div>
                     <div className="p-5 bg-gray-900 mt-10 flex items-center rounded-xl">
                         <div>
-                            <div className="bg-blue-500 h-20 w-96 flex items-center justify-center text-2xl font-semibold text-white rounded-xl">
+                            <div className="bg-blue-500 h-20 w-96 flex items-center justify-center text-2xl font-semibold  rounded-xl" onClick={buyItem}>
                                 <FaWallet className="mr-5"/>
                                 <p>BUY NFT</p>
                             </div>

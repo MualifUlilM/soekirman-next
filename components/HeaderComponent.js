@@ -1,4 +1,4 @@
-// import Image from 'next/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -47,24 +47,24 @@ export default function Header() {
 
     return (
 
-        <div className="max-w-7xl m-auto py-5 px-5 flex justify-between bg-black">
+        <div className="max-w-7xl m-auto py-5 px-5 flex justify-between ">
             <div className='flex items-center justify-center'>
                     <Image src={soekirmanLogo} height={70} width={70}></Image>
-                <div className='pl-5 text-white font-bold text-xl italic' >{siteTitle.toUpperCase()}</div>
+                <div className='pl-5  font-bold text-xl italic' >{siteTitle.toUpperCase()}</div>
             </div>
             <div className="flex items-center font-semibold italic">
                 {menu.map((item, index) => {
-                    return <a key={item.name} href={item.link} className="text-white text-sm mr-5 hover:text-blue-400">{item.name}</a>
+                    return <a key={item.name} href={item.link} className=" text-sm mr-5 hover:text-blue-400">{item.name}</a>
                 })}
                 <Link href="/galleries">
-                    <div className='text-white text-sm mr-5 hover:text-blue-400 cursor-pointer'>Galleries</div>
+                    <div className=' text-sm mr-5 hover:text-blue-400 cursor-pointer'>Galleries</div>
                 </Link>
                 {
                     !isLogin ? <button
                     onClick={() => connectWallet('injected').then(()=>{
                         setIsLogin(true)
                     })}
-                    className="bg-blue-400 px-5 py-2 rounded-md text-white font-semibold italic">
+                    className="bg-blue-600 px-5 py-2 rounded-md  font-semibold italic">
                     Connect Wallet
                 </button> : <div></div> 
                 }

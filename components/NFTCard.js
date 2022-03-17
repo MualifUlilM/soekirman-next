@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Link from 'next/link'
 
 const NFTCard = ({ nftItem, title, listings }) => {
     const [isListed, setIsListed] = useState(false);
@@ -21,14 +22,10 @@ const NFTCard = ({ nftItem, title, listings }) => {
 
 
     return (
-        <div className="text-white m-2" onClick={()=>router.push({
-            pathname: `/nfts/${nftItem.id}`,
-            query: {
-                isListed: isListed,
-            }
-        })}>
-            <img src={nftItem.image} className="h-80 w-60 object-cover rounded-lg"></img>
-            <div className="flex justify-between py-2 items-center px-2">
+        <Link className="" href={`https://testnets.opensea.io/assets/0xad0fd2041f28f5e87fb1658c97f43a6a3249d36d/${nftItem.id}`} >
+            <a className="flex flex-col m-2 items-center" target="_blank">
+            <img src={nftItem.image} className="h-80 w-60 object-cover rounded-lg items-center"></img>
+            <div className="flex justify-between py-2 px-2 w-full ">
                 <div>{title}</div>
                 {
                     isListed ? (
@@ -38,7 +35,8 @@ const NFTCard = ({ nftItem, title, listings }) => {
                         </div>) : (<div></div>)
                 }
             </div>
-        </div>
+            </a>
+        </Link>
     )
 }
 

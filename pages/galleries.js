@@ -57,17 +57,18 @@ function Galleries() {
   }, [marketPlaceModule])
 
   return (
-    <div className="bg-black min-h-screen">
+    <div className=" min-h-screen">
       <Header />
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-start pl-5">
-          <h1 className="text-white text-5xl font-bold italic">GALLERIES</h1>
+      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center">
+        <div className="flex justify-start items-center mb-10">
+          <h1 className=" text-5xl font-bold italic">GALLERIES</h1>
         </div>
-        <div className="flex flex-wrap justify-center max-w-7xl">
-          {nfts.map(nft => (
-           <NFTCard nftItem={nft} title={nft.name} listings={listings} key={nft.id} />
-          ))}
-        </div>
+        <div className="flex items-center max-w-7xl mx-auto">
+          <div className="grid grid-cols-3 max-w-3xl align-middle content-center">
+            {nfts.map(nft => (
+             <NFTCard nftItem={nft} title={nft.name} listings={listings} key={nft.id} />
+            ))}
+        </div> </div>
       </div>
     </div>
   )
