@@ -1,11 +1,8 @@
+import { useWeb3 } from '@3rdweb/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
-import {useRouter} from 'next/router'
 import React, { useEffect, useState } from 'react'
 import soekirmanLogo from '../assets/logo.png'
-import { ThirdwebProvider, ConnectWallet } from '@3rdweb/react'
-import { useWeb3 } from '@3rdweb/hooks'
-import { client } from '../lib/sanityClient'
 
 
 export default function Header() {
@@ -14,19 +11,13 @@ export default function Header() {
     
 
     const [isLogin, setIsLogin] = useState(false);
-    // const welcomeUser = (userName, toastHandler = toast) => {
-    //     toastHandler.success(
-    //         `Welcome back${userName !== 'Unnamed' ? ` ${userName}` : ''}!`,
-    //         {
-    //             style: {
-    //                 background: '#04111d',
-    //                 color: '#fff',
-    //             },
-    //         }
-    //     )
-    // }
+
+    const gotoElement = ((id)=>{
+        // document.getElementById("#example").scrollIntoView()
+    })
 
     useEffect(() => {
+        console.log("executed")
         if(Boolean(address)){
             console.log(address)
             setIsLogin(true)
@@ -54,7 +45,7 @@ export default function Header() {
             </div>
             <div className="flex items-center font-semibold italic">
                 {menu.map((item, index) => {
-                    return <a key={item.name} href={item.link} className=" text-sm mr-5 hover:text-blue-400">{item.name}</a>
+                    return <a key={item.name} href={gotoElement("#example")} className=" text-sm mr-5 hover:text-blue-400">{item.name}</a>
                 })}
                 <Link href="/galleries">
                     <div className=' text-sm mr-5 hover:text-blue-400 cursor-pointer'>Galleries</div>
@@ -63,6 +54,7 @@ export default function Header() {
                     !isLogin ? <button
                     onClick={() => connectWallet('injected').then(()=>{
                         setIsLogin(true)
+                        console.log(address)
                     })}
                     className="bg-blue-600 px-5 py-2 rounded-md  font-semibold italic">
                     Connect Wallet

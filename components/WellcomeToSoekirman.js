@@ -17,7 +17,7 @@ const WellcomeToSoekirman = () => {
 
                 <div className="max-w-3xl">
                     <h1 className="font-montserrat font-bold italic  text-4xl">
-                        WELLCOME TO THE SOEKIRMAN CLUB
+                        WELCOME TO THE SOEKIRMAN CLUB
                     </h1>
                     <p className=" font-montserrat font-light py-10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
@@ -47,7 +47,7 @@ const WellcomeToSoekirman = () => {
                 </div>
             </div>
 
-            <div className="flex items-center mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center">
+            <div className="flex items-center mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center" id="example">
                 <div className="max-w-5xl">
                     <h2 className="text-blue-400 font-montserrat italic font-normal text-4xl">
                         FAIR DISTRIBUTION

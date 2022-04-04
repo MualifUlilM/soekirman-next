@@ -3,7 +3,7 @@ function ImageComponent(text) {
     <div className="max-w-xl mx-auto w-auto" key={text}>
       <div className="flex-1 h-auto p-2">
         <img
-          src="https://indonesiamendesain.com/wp-content/uploads/2020/07/Example-of-computer-illustration-digital-art-oct16.jpg"
+          src="https://www.work.mualif.my.id/climbingfish/wp-content/uploads/elementor/thumbs/7a69ec7d03314334d75e9ae2d583346d-scaled-pk76li0ky9cejyr0l2fmpnughohts03z7u35lx675k.jpgnesiamendesain.com/wp-content/uploads/2020/07/Example-of-computer-illustration-digital-art-oct16.jpg"
           className="h-40 w-40 object-cover align-middle mx-auto"
           alt=""
           srcSet=""
@@ -29,7 +29,7 @@ export default function WellcomeToTheClub() {
     className="max-w-7xl mx-auto mt-14 border-solid border-gray-600 border-b-2 mobile:flex-col tablet:flex-col desktop:flex-row tablet:text-center desktop:text-left mobile:text-center"
   >
     <h1 className=" text-3xl font-montserrat font-bold italic">
-      WELLCOME TO THE CLUB
+      WELCOME TO THE CLUB
     </h1>
     <p
       className="py-5  font-montserrat font-light tablet:max-w-xl mobile:max-w-xl desktop:max-w-7xl mx-auto"

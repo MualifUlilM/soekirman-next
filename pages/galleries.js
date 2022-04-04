@@ -14,7 +14,7 @@ import NFTCard from "../components/NFTCard";
 
 function Galleries() {
 
-  const { provider } = useWeb3();
+  const { provider, address, connectWallet} = useWeb3();
   const [nfts, setNfts] = useState([])
   const [listings, setListings] = useState([])
 
@@ -63,6 +63,14 @@ function Galleries() {
         <div className="flex justify-start items-center mb-10">
           <h1 className=" text-5xl font-bold italic">GALLERIES</h1>
         </div>
+        {
+          !provider? <div className="flex flex-col">
+            <div className="mb-5">You need to connect your wallet first</div>
+            <button className="bg-blue-700 italic px-5 py-3 rounded-lg font-bold text-white" onClick={()=>connectWallet('injected')}>
+              Connect Wallet
+            </button>
+          </div> : <div></div>
+        }
         <div className="flex items-center max-w-7xl mx-auto">
           <div className="grid grid-cols-3 max-w-3xl align-middle content-center">
             {nfts.map(nft => (
