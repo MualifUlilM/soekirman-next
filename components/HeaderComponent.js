@@ -45,7 +45,8 @@ export default function Header() {
             </div>
             <div className="flex items-center font-semibold italic">
                 {menu.map((item, index) => {
-                    return <a key={item.name} href={gotoElement("#example")} className=" text-sm mr-5 hover:text-blue-400">{item.name}</a>
+                    return <button onClick={gotoElement("#Element")} className="text-sm mr-5 hover:text-blue-400 font-semibold">{item.name}</button>
+                    // <a key={item.name} href={gotoElement("#example")} className=" text-sm mr-5 hover:text-blue-400">{item.name}</a>
                 })}
                 <Link href="/galleries">
                     <div className=' text-sm mr-5 hover:text-blue-400 cursor-pointer'>Galleries</div>
